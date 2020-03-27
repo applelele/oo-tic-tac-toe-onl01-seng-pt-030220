@@ -54,29 +54,17 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8
     # If it returns true, the code on the left side of the : ("colon") will run,
     # otherwise the code on the right will run.
 
-    def turn
-      input = gets.strip
-      index = input_to_index(input)
-      if valid_move?(index)
-        token = current_player
-        move(index, token)
-        display_board
-      else
-        turn
-      end
+  def turn
+    puts "Please input number between 1 and 9."
+    int = gets.strip
+    index = input_to_index(int)
+    if valid_move?(index) # == true is not necessary
+      move(index, current_player)
+      display_board
+    else
+      turn
     end
-
-  #   def turn
-  #   puts "Please input number between 1 and 9."
-  #   int = gets.strip
-  #   index = input_to_index(int)
-  #   if valid_move?(index) # == true is not necessary
-  #     move(index, current_player)
-  #     display_board
-  #   else
-  #     turn
-  #   end
-  # end
+  end
 
   def won?
     WIN_COMBINATIONS.detect do |winner|
