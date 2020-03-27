@@ -43,7 +43,7 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8
   end
 
   def turn_count
-    @board.count{|token| token == "X" || token == "O"}
+    @board.count{|token| token == "X" || token == "O"} # count element(token) numbers which are X or O
   end
     # how many tokens which are equal to X or O in @board array (array.count {|elm| elm%2 == 0})
 
