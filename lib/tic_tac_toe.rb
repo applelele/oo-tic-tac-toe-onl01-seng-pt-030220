@@ -55,8 +55,7 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8
     # otherwise the code on the right will run.
 
   def turn
-
-    puts "Please input number between 1 and 9."
+    # puts "Please input number between 1 and 9."
     int = gets.strip
     index = input_to_index(int)
     if valid_move?(index) # == true is not necessary
