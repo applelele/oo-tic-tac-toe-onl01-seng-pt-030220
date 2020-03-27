@@ -35,7 +35,7 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8
   end
 
   def valid_move?(index)
-    if position_taken?(index) || index > 8 # 1.that is not taken, 2.index has to be between 0-8
+    if position_taken?(index) || index > 8 || index < 0 # 1.that is not taken, 2.index has to be between 0-8
       false
     else
       true
